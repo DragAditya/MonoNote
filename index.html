@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MonoNote</title>
+    <meta name="description" content="Ultra-fast shareable code notebook" />
+    
+    <!-- Highlight.js for Syntax Highlighting (Lightweight Github Theme) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              mono: ['Menlo', 'Monaco', 'Consolas', '"Liberation Mono"', '"Courier New"', 'monospace'],
+            },
+            colors: {
+              paper: '#ffffff',
+              ink: '#1a1a1a',
+              pencil: '#737373',
+              line: '#e5e5e5',
+            }
+          },
+        },
+      }
+    </script>
+    <style>
+      body {
+        background-color: #ffffff;
+        color: #1a1a1a;
+        -webkit-font-smoothing: antialiased;
+      }
+      /* Hide scrollbar for clean look in some elements */
+      .no-scrollbar::-webkit-scrollbar {
+        display: none;
+      }
+      .no-scrollbar {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+      }
+      
+      /* Code block styling overrides for Highlight.js */
+      pre code.hljs {
+        padding: 0;
+        background: transparent;
+        font-size: 0.875rem; /* text-sm */
+        line-height: 1.625;
+      }
+
+      /* Print Styles */
+      @media print {
+        header, footer, button, .no-print {
+          display: none !important;
+        }
+        body {
+          background: white;
+        }
+        main {
+          max-width: 100%;
+          margin: 0;
+          padding: 0;
+        }
+        pre {
+          border: 1px solid #ccc;
+          white-space: pre-wrap; /* Wrap long lines in print */
+        }
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "react": "https://esm.sh/react@^19.2.3",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "react-router-dom": "https://esm.sh/react-router-dom@^7.11.0",
+    "lz-string": "https://esm.sh/lz-string@^1.5.0"
+  }
+}
+</script>
+</head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
